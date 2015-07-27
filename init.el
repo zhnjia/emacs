@@ -19,6 +19,11 @@
 (require-package 'diminish)
 (require 'init-isearch)
 (require 'init-editing-utils)
+(require 'init-paredit)
+(require 'init-lisp)
+
+(require-package 'wgrep)
+(require 'init-grep)
 
 ;;Theme
 (require-package 'zenburn-theme)
@@ -38,6 +43,7 @@
 (require-package 'yasnippet)
 ;;(require-package 'smartparens)
 (require-package 'ggtags)
+(require-package 'goto-chg)
 
 ;;other
 (setq fci-rule-color "darkred")
@@ -55,6 +61,7 @@
 	  (lambda()
         (fci-mode)
 	    (projectile-global-mode)
+        (aggressive-indent-mode)
 	    (ggtags-mode)))
 
 
