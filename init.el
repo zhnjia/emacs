@@ -18,6 +18,7 @@
 
 (require-package 'diminish)
 (require 'init-isearch)
+(require 'init-editing-utils)
 
 ;;Theme
 (require-package 'zenburn-theme)
@@ -25,7 +26,6 @@
 
 ;;Company
 (require-package 'company)
-(add-hook 'after-init-hook 'global-company-mode)
 
 ;;Productitivity
 (require-package 'window-numbering)
@@ -36,12 +36,25 @@
 (require-package 'undo-tree)
 (require-package 'projectile)
 (require-package 'yasnippet)
-(require-package 'smartparens)
+;;(require-package 'smartparens)
 (require-package 'ggtags)
 
 ;;other
-(custom-set-variables
-    '(auto-save-default nil)
-    '(global-linum-mode t)
-    '(column-number-mode t)
-    '(tool-bar-mode nil)) 
+(add-hook 'c-mode-common-hook
+ (lambda()
+  (set-fill-column 80)))
+(add-hook 'java-mode-hook
+ (lambda()
+  (set-fill-column 100)))
+(add-hook 'after-init-hook
+	  (lambda()
+	    (global-company-mode)))
+(add-hook 'prog-mode-hook
+	  (lambda()
+        (fci-mode)
+	    (projectile-global-mode)
+	    (ggtags-mode)))
+
+
+(add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
+;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
