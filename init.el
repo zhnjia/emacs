@@ -19,11 +19,11 @@
 (require-package 'diminish)
 (require 'init-isearch)
 (require 'init-editing-utils)
-(require 'init-paredit)
-(require 'init-lisp)
 
 (require-package 'wgrep)
 (require 'init-grep)
+(require 'init-paredit)
+(require 'init-lisp)
 
 ;;Theme
 (require-package 'zenburn-theme)
