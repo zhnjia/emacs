@@ -1,2 +1,2 @@
 # emacs
-emacs.d
+copied and customized from https://github.com/purcell/emacs.d
