@@ -25,10 +25,6 @@
 (require 'init-paredit)
 (require 'init-lisp)
 
-;;Theme
-(require-package 'zenburn-theme)
-(load-theme 'zenburn t)
-
 ;;Company
 (require-package 'company)
 
@@ -67,3 +63,7 @@
 
 (add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
 ;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
+
+;;Theme
+(require-package 'solarized-theme)
+;(load-theme 'solarized-dark)
