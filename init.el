@@ -11,6 +11,11 @@
 ;;Bootstrap config
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (require 'init-elpa)
+
+;;Theme
+(require-package 'solarized-theme)
+(load-theme 'solarized-dark t)
+
 (require 'init-ido)
 (require 'init-org)
 (require 'init-git)
@@ -64,6 +69,3 @@
 (add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
 ;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
 
-;;Theme
-(require-package 'solarized-theme)
-;(load-theme 'solarized-dark)
