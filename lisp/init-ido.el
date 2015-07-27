@@ -26,8 +26,6 @@
 
 (require-package 'ido-vertical-mode)
 (ido-vertical-mode t)
-(require-package 'ido-yes-or-no)
-(ido-yes-or-no-mode t)
 
 
 (provide 'init-ido)

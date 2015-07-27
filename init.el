@@ -40,6 +40,8 @@
 (require-package 'ggtags)
 
 ;;other
+(setq fci-rule-color "darkred")
+(defalias 'yes-or-no-p 'y-or-n-p)
 (add-hook 'c-mode-common-hook
  (lambda()
   (set-fill-column 80)))
