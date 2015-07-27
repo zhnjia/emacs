@@ -67,5 +67,7 @@
 
 
 (add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
-;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
+;;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
 
+(require-package 'elfeed)
+(setq elfeed-feeds '("http://www.techug.com/feed"))
