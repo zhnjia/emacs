@@ -8,6 +8,7 @@ C-M-<backspace>  kill-back-to-indent
 [ggtags]
 M-]              ggtags-find-reference
 M-.              ggtags-find-tag-dwin
+M-*              pop-tag-mark
 
 [expand-region]
 C-=              er/expand-region

@@ -37,6 +37,7 @@
 (global-auto-revert-mode)
 (setq global-auto-revert-non-file-buffers t
       auto-revert-verbose nil)
+(setq auto-save-default nil)
 
 (transient-mark-mode t)
 

@@ -48,6 +48,7 @@
 
 ;;other
 (setq fci-rule-color "darkred")
+(setq cursor-type (quote bar))
 (defalias 'yes-or-no-p 'y-or-n-p)
 (add-hook 'c-mode-common-hook
  (lambda()
@@ -60,14 +61,19 @@
 	    (global-company-mode)))
 (add-hook 'prog-mode-hook
 	  (lambda()
-        (fci-mode)
+            (fci-mode)
 	    (projectile-global-mode)
-        (aggressive-indent-mode)
+            (aggressive-indent-mode)
 	    (ggtags-mode)))
 
-
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
 ;;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
 
 (require-package 'elfeed)
-(setq elfeed-feeds '("http://www.techug.com/feed"))
+(setq elfeed-feeds
+      '("http://www.geekfan.net/feed/"
+        "http://www.blackberryfans.com/portal.php?mod=rss"
+        "http://songshuhui.net/feed"
+        "http://blog.jobbole.com/feed"
+        "http://www.techug.com/feed"))
