@@ -48,7 +48,7 @@
 
 ;;other
 (setq fci-rule-color "darkred")
-(setq cursor-type (quote bar))
+(setq default-cursor-type 'bar)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (add-hook 'c-mode-common-hook
  (lambda()
