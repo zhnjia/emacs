@@ -29,6 +29,7 @@
 (require 'init-grep)
 (require 'init-paredit)
 (require 'init-lisp)
+(require 'init-mu4e)
 
 ;;Company
 (require-package 'company)
@@ -45,6 +46,9 @@
 ;;(require-package 'smartparens)
 (require-package 'ggtags)
 (require-package 'goto-chg)
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+(require 'mu4e)
 
 ;;other
 (setq fci-rule-color "darkred")
@@ -77,3 +81,8 @@
         "http://songshuhui.net/feed"
         "http://blog.jobbole.com/feed"
         "http://www.techug.com/feed"))
+
+(when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
+  (error "Please move init-local.el to ~/.emacs.d/lisp"))
+(require 'init-local nil t)
+
