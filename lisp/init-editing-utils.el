@@ -33,6 +33,7 @@
 (global-hl-line-mode t)
 (global-linum-mode t)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 (global-auto-revert-mode)
 (setq global-auto-revert-non-file-buffers t

@@ -3,7 +3,7 @@
 (require 'mu4e)
 
 (setq
- mu4e-maildir "~/.mailbox"
+ mu4e-maildir "~/.mailbox/INBOX/cur"
  mu4e-sent-folder "/sent"
  mu4e-drafts-folder "/drafts"
  mu4e-trash-folder "/trash"

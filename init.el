@@ -26,10 +26,10 @@
 (require 'init-editing-utils)
 
 (require-package 'wgrep)
-(require 'init-grep)
 (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-mu4e)
+(require 'init-helm)
 
 ;;Company
 (require-package 'company)
@@ -44,7 +44,7 @@
 (require-package 'projectile)
 (require-package 'yasnippet)
 ;;(require-package 'smartparens)
-(require-package 'ggtags)
+;;(require-package 'ggtags)
 (require-package 'goto-chg)
 
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
@@ -66,9 +66,11 @@
 (add-hook 'prog-mode-hook
 	  (lambda()
             (fci-mode)
+            (setq c-basic-offset 4)
 	    (projectile-global-mode)
             (aggressive-indent-mode)
-	    (ggtags-mode)))
+            (yas-global-mode)
+            (superword-mode)))
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
@@ -85,4 +87,3 @@
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
   (error "Please move init-local.el to ~/.emacs.d/lisp"))
 (require 'init-local nil t)
-
