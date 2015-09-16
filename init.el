@@ -37,6 +37,7 @@
 (require 'init-lisp)
 (require 'init-mu4e)
 (require 'init-helm)
+(require 'init-projectile)
 
 ;;Company
 (require-package 'company)
@@ -48,7 +49,6 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require-package 'expand-region)
 (require-package 'undo-tree)
-(require-package 'projectile)
 (require-package 'yasnippet)
 ;;(require-package 'smartparens)
 ;;(require-package 'ggtags)
