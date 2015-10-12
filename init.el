@@ -40,7 +40,10 @@
 (require 'init-projectile)
 
 ;;Company
-(require-package 'company)
+(require 'init-company)
+
+;;auto-complete
+;;(require 'init-ac)
 
 ;;Productitivity
 (require-package 'window-numbering)
@@ -67,9 +70,6 @@
 (add-hook 'java-mode-hook
  (lambda()
   (set-fill-column 100)))
-(add-hook 'after-init-hook
-	  (lambda()
-	    (global-company-mode)))
 (add-hook 'prog-mode-hook
 	  (lambda()
             (fci-mode)
@@ -80,8 +80,8 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-(add-to-list 'default-frame-alist '(font .  "Hack-11"))
-;;(add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
+;;(add-to-list 'default-frame-alist '(font .  "Hack-11"))
+(add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
 ;;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
 
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
