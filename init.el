@@ -56,6 +56,7 @@
 ;;(require-package 'smartparens)
 ;;(require-package 'ggtags)
 (require-package 'goto-chg)
+(require-package 'json-reformat)
 
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
