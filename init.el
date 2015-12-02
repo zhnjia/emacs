@@ -35,7 +35,7 @@
 (require-package 'wgrep)
 (require 'init-paredit)
 (require 'init-lisp)
-(require 'init-mu4e)
+;;(require 'init-mu4e)
 (require 'init-helm)
 (require 'init-projectile)
 
@@ -57,9 +57,6 @@
 ;;(require-package 'ggtags)
 (require-package 'goto-chg)
 (require-package 'json-reformat)
-
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
-(require 'mu4e)
 
 ;;other
 (setq fci-rule-color "darkred")
