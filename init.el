@@ -46,18 +46,18 @@
 ;;(require 'init-ac)
 
 ;;Productitivity
-;;(require-package 'window-numbering)
-;;(window-numbering-mode t)
 (require 'init-ace-window)
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require-package 'expand-region)
 (require-package 'undo-tree)
 (require-package 'yasnippet)
-;;(require-package 'smartparens)
-;;(require-package 'ggtags)
 (require-package 'goto-chg)
 (require-package 'json-reformat)
+
+;; powerline
+(require-package 'powerline)
+(powerline-default-theme)
 
 ;;(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 ;;(require 'mu4e)
