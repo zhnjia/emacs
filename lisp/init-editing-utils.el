@@ -99,8 +99,9 @@
 (require-package 'highlight-symbol)
 (dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook))
   (add-hook hook 'highlight-symbol-mode)
-  (add-hook hook 'highlight-symbol-nav-mode))
-(add-hook 'org-mode-hook 'highlight-symbol-nav-mode)
+  ;;  (add-hook hook 'highlight-symbol-nav-mode)
+  )
+;;(add-hook 'org-mode-hook 'highlight-symbol-nav-mode)
 (after-load 'highlight-symbol
   (diminish 'highlight-symbol-mode)
   (defadvice highlight-symbol-temp-highlight (around sanityinc/maybe-suppress activate)
@@ -108,6 +109,8 @@
     (unless (or isearch-mode
                 (and (boundp 'multiple-cursors-mode) multiple-cursors-mode))
       ad-do-it)))
+(global-set-key [f3] 'highlight-symbol-next)
+(global-set-key [(shift f3)] 'highlight-symbol-prev)
 
 ;;----------------------------------------------------------------------------
 ;; Zap *up* to char is a handy pair for zap-to-char
@@ -122,7 +125,7 @@
 (global-set-key (kbd "M-Y") 'browse-kill-ring)
 (after-load 'browse-kill-ring
   (define-key browse-kill-ring-mode-map (kbd "M-n") 'browse-kill-ring-forward)
-  (define-key browse-kill-ring-mode-map (kbd "M-p") 'browse-kill-ring-previous))
+  (define-key browse-kill-ring-mode-map (kbd "M-N") 'browse-kill-ring-previous))
 (after-load 'page-break-lines
   (push 'browse-kill-ring-mode page-break-lines-modes))
 

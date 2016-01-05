@@ -27,8 +27,8 @@
 (require-package 'ido-vertical-mode)
 (setq ido-vertical-define-keys 'C-n-and-C-p-only)
 (ido-vertical-mode t)
-(require-package 'ido-yes-or-no)
-(ido-yes-or-no-mode t)
+;;(require-package 'ido-yes-or-no)
+;;(ido-yes-or-no-mode t)
 
 
 (provide 'init-ido)

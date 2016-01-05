@@ -83,7 +83,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;;(add-to-list 'default-frame-alist '(font .  "Hack-11"))
-(add-to-list 'default-frame-alist '(font .  "Ubuntu Mono-12"))
+(add-to-list 'default-frame-alist '(font .  "Source Code Pro-11"))
 ;;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
 
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
