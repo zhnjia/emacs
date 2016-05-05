@@ -91,3 +91,6 @@
 (require 'init-local nil t)
 
 (require 'init-alias)
+
+(require-package 'window-numbering)
+(window-numbering-mode t)
