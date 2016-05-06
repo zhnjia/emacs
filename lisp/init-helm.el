@@ -18,9 +18,12 @@
   (helm-gtags-mode)))
 
 (require-package 'helm-ag)
-(global-set-key (kbd "M-?") 'helm-do-ag-project-root)
+(global-set-key (kbd "M-?") 'helm-do-ag)
 
 (require-package 'helm-swoop)
-(setq helm-swoop-split-direction 'split-window-vertically)
+(global-set-key (kbd "C-x ESC s") 'helm-swoop)
+(setq helm-swoop-split-direction 'split-window-horizontally)
+
+(global-set-key (kbd "C-x ESC i") 'helm-imenu)
 
 (provide 'init-helm)
