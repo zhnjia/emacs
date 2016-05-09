@@ -22,7 +22,7 @@
 
 (require-package 'helm-swoop)
 (global-set-key (kbd "C-x ESC s") 'helm-swoop)
-(setq helm-swoop-split-direction 'split-window-horizontally)
+(setq helm-swoop-split-direction 'split-window-vertically)
 
 (global-set-key (kbd "C-x ESC i") 'helm-imenu)
 
