@@ -24,6 +24,4 @@
 (global-set-key (kbd "C-x ESC s") 'helm-swoop)
 (setq helm-swoop-split-direction 'split-window-vertically)
 
-(global-set-key (kbd "C-x ESC i") 'helm-imenu)
-
 (provide 'init-helm)

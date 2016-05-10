@@ -70,8 +70,9 @@
  (lambda()
   (set-fill-column 80)))
 (add-hook 'java-mode-hook
- (lambda()
-  (set-fill-column 100)))
+          (lambda()
+            (set-fill-column 100)
+            (setq c-basic-offset 4)))
 (add-hook 'prog-mode-hook
 	  (lambda()
             (fci-mode)
@@ -96,3 +97,13 @@
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (require 'init-swiper)
+
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(c-add-style "WebKit" '("Google"
+                        (c-basic-offset . 4)
+                        (c-offsets-alist . ((innamespace . 0)
+                                            (access-label . -)
+                                            (case-label . 0)
+                                            (member-init-intro . +)
+                                            (topmost-intro . 0)))))
