@@ -78,8 +78,7 @@
             (fci-mode)
             (setq c-basic-offset 4)
             ;;(aggressive-indent-mode)
-            (yas-global-mode)
-            (superword-mode)))
+            (yas-global-mode)))
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))

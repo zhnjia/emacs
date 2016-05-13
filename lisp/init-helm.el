@@ -20,8 +20,6 @@
 (require-package 'helm-ag)
 (global-set-key (kbd "M-?") 'helm-do-ag)
 
-(require-package 'helm-swoop)
-(global-set-key (kbd "C-x ESC s") 'helm-swoop)
-(setq helm-swoop-split-direction 'split-window-vertically)
+(global-set-key (kbd "C-x M-s") 'helm-semantic)
 
 (provide 'init-helm)
