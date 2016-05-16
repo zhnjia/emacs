@@ -77,14 +77,18 @@
 	  (lambda()
             (fci-mode)
             (setq c-basic-offset 4)
+            (semantic-mode)
             ;;(aggressive-indent-mode)
             (yas-global-mode)))
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-;;(add-to-list 'default-frame-alist '(font .  "Hack-11"))
-(add-to-list 'default-frame-alist '(font .  "Source Code Pro-11"))
-;;(set-face-attribute 'default t :font  "Ubuntu Mono-12")
+;;(add-to-list 'default-frame-alist '(font .  "Source Code Pro-10"))
+(set-face-attribute 'default nil
+                    :family "Source Code Pro"
+                    :height 105
+                    :weight 'normal
+                    :width 'normal)
 
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
   (error "Please move init-local.el to ~/.emacs.d/lisp"))
