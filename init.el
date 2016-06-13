@@ -46,7 +46,7 @@
 ;;(require 'init-ac)
 
 ;;Productitivity
-(require 'init-ace-window)
+;;(require 'init-ace-window)
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require-package 'expand-region)
@@ -54,6 +54,10 @@
 (require-package 'yasnippet)
 (require-package 'goto-chg)
 (require-package 'json-reformat)
+
+;; window numbering
+(require-package 'window-numbering)
+(window-numbering-mode)
 
 ;; powerline
 (require-package 'powerline)
@@ -78,6 +82,7 @@
             (fci-mode)
             (setq c-basic-offset 4)
             (semantic-mode)
+            (global-semantic-highlight-func-mode)
             ;;(aggressive-indent-mode)
             (yas-global-mode)))
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
