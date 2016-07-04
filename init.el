@@ -115,3 +115,5 @@
                                             (case-label . 0)
                                             (member-init-intro . +)
                                             (topmost-intro . 0)))))
+
+(setq shell-file-name "/usr/bin/zsh")
