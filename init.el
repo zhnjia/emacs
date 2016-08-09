@@ -42,6 +42,8 @@
 ;;Company
 (require 'init-company)
 
+(require 'init-perspective)
+
 ;;auto-complete
 ;;(require 'init-ac)
 
@@ -117,3 +119,5 @@
                                             (topmost-intro . 0)))))
 
 (setq shell-file-name "/usr/bin/zsh")
+
+(require-package 'markdown-mode)
