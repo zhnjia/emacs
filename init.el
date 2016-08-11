@@ -121,3 +121,6 @@
 (setq shell-file-name "/usr/bin/zsh")
 
 (require-package 'markdown-mode)
+
+(require 'multi-term)
+(setq multi-term-program "/usr/bin/zsh")
