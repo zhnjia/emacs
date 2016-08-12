@@ -1,9 +1,7 @@
 (require-package 'projectile)
-
+(require-package 'helm-projectile)
 ;;(setq projectile-indexing-method 'native)
 ;;(setq projectile-enable-caching t)
-
-(setq projectile-keymap-prefix (kbd "C-c P"))
 
 (defvar my-project-name nil)
 (put 'my-project-name 'safe-local-variable #'stringp)
@@ -14,5 +12,7 @@
 (advice-add 'projectile-project-name :around #'projectile-project-name--prefer-mine)
 
 (projectile-global-mode)
+
+(helm-projectile-on)
 
 (provide 'init-projectile)

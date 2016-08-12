@@ -42,7 +42,7 @@
 ;;Company
 (require 'init-company)
 
-(require 'init-perspective)
+;;(require 'init-perspective)
 
 ;;auto-complete
 ;;(require 'init-ac)
