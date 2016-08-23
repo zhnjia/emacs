@@ -364,10 +364,11 @@ With arg N, insert N newlines."
 (hes-mode)
 
 
-(require-package 'guide-key)
-(setq guide-key/guide-key-sequence '("C-x" "C-c" "C-x 4" "C-x 5" "C-c ;" "C-c ; f" "C-c ' f" "C-x n" "C-x C-r" "C-x r"))
-(guide-key-mode 1)
-(diminish 'guide-key-mode)
-
+(require-package 'which-key)
+(which-key-mode)
+(which-key-setup-minibuffer)
+(setq which-key-popup-type 'minibuffer)
+(setq which-key-idle-delay 0.4)
+(setq which-key-separator " → " )
 
 (provide 'init-editing-utils)

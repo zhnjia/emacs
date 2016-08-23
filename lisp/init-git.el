@@ -30,6 +30,7 @@
 (when (maybe-require-package 'git-commit)
   (add-hook 'git-commit-mode-hook 'goto-address-mode))
 
+(setq vc-handled-backends (delq 'Git vc-handled-backends))
 
 
 ;; Convenient binding for vc-git-grep
