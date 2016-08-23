@@ -48,7 +48,7 @@
 ;;(require 'init-ac)
 
 ;;Productitivity
-(require 'init-window)
+(require 'init-windows)
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require-package 'expand-region)
