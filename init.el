@@ -48,7 +48,7 @@
 ;;(require 'init-ac)
 
 ;;Productitivity
-(require 'init-ace-window)
+(require 'init-window)
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require-package 'expand-region)
@@ -56,16 +56,6 @@
 (require-package 'yasnippet)
 (require-package 'goto-chg)
 (require-package 'json-reformat)
-
-;; window numbering
-;;(require-package 'window-numbering)
-;;(window-numbering-mode)
-
-(require-package 'golden-ratio)
-(golden-ratio-mode 1)
-(setq golden-ratio-adjust-factor .8)
-(add-to-list 'golden-ratio-exclude-buffer-names "*helm projectile*")
-(add-to-list 'golden-ratio-extra-commands 'ace-window)
 
 ;; powerline
 (require-package 'powerline)
