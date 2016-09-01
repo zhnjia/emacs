@@ -1,3 +1,5 @@
+;;====================================================================
+;; Projectile
 (require-package 'projectile)
 (require-package 'helm-projectile)
 ;;(setq projectile-indexing-method 'native)
@@ -15,4 +17,9 @@
 
 (helm-projectile-on)
 
-(provide 'init-projectile)
+;;====================================================================
+;; zeal
+(require-package 'zeal-at-point)
+(global-set-key "\C-cz" 'zeal-at-point)
+
+(provide 'init-ide)
