@@ -121,3 +121,6 @@
 (setq multi-term-program "/usr/bin/zsh")
 
 (require 'init-hydra)
+
+(require 'init-myblog)
+;;(require 'init-orgpage)
