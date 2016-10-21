@@ -321,5 +321,20 @@ typical word processor."
      (sql . nil)
      (sqlite . t))))
 
+(with-eval-after-load 'fill-column-indicator
+  (defvar modi/htmlize-initial-fci-state nil
+    "Variable to store the state of `fci-mode' when `htmlize-buffer' is called.")
+
+  (defun modi/htmlize-before-hook-fci-disable ()
+    (setq modi/htmlize-initial-fci-state fci-mode)
+    (when fci-mode
+      (fci-mode -1)))
+
+  (defun modi/htmlize-after-hook-fci-enable-maybe ()
+    (when modi/htmlize-initial-fci-state
+      (fci-mode 1)))
+
+  (add-hook 'htmlize-before-hook #'modi/htmlize-before-hook-fci-disable)
+  (add-hook 'htmlize-after-hook #'modi/htmlize-after-hook-fci-enable-maybe))
 
 (provide 'init-org)

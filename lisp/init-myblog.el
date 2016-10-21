@@ -4,7 +4,7 @@
         ("blog-notes"
          :base-directory "~/org/blogs/org/"
          :base-extension "org"
-         :publishing-directory "~/org/blogs/public_html/"
+         :publishing-directory "~/org/blogs/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 4
@@ -21,7 +21,7 @@
         ("blog-static"
          :base-directory "~/org/blogs/org/"
          :base-extention "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/org/blogs/public_html/"
+         :publishing-directory "~/org/blogs/"
          :recursive t
          :publishing-function org-publish-attachment
          )
