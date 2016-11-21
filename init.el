@@ -31,11 +31,12 @@
 (require 'init-isearch)
 (require 'init-editing-utils)
 
-(require-package 'wgrep)
+;;(require-package 'wgrep)
 (require 'init-paredit)
 (require 'init-lisp)
 ;;(require 'init-mu4e)
-(require 'init-helm)
+;;(require 'init-helm)
+(require 'init-counsel)
 (require 'init-ide)
 
 ;;Company
@@ -48,11 +49,8 @@
 
 ;;Productitivity
 (require 'init-windows)
-(require-package 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require-package 'expand-region)
 (require-package 'undo-tree)
-(require-package 'yasnippet)
 (require-package 'goto-chg)
 (require-package 'json-reformat)
 
@@ -67,30 +65,6 @@
 (setq fci-rule-color "darkred")
 (setq default-cursor-type 'bar)
 (defalias 'yes-or-no-p 'y-or-n-p)
-(add-hook 'c-mode-common-hook
- (lambda()
-  (set-fill-column 80)))
-(add-hook 'java-mode-hook
-          (lambda()
-            (set-fill-column 100)
-            (setq c-basic-offset 4)))
-(add-hook 'prog-mode-hook
-	  (lambda()
-            (fci-mode)
-            (setq c-basic-offset 4)
-            (semantic-mode)
-            (global-semantic-highlight-func-mode)
-            ;;(aggressive-indent-mode)
-            (yas-global-mode)))
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-;;(add-to-list 'default-frame-alist '(font .  "Source Code Pro-10"))
-(set-face-attribute 'default nil
-                    :family "Source Code Pro"
-                    :height 105
-                    :weight 'normal
-                    :width 'normal)
 
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
   (error "Please move init-local.el to ~/.emacs.d/lisp"))
@@ -98,29 +72,14 @@
 
 (require 'init-alias)
 
-(require-package 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-
-(require 'init-swiper)
-
-(require 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(c-add-style "WebKit" '("Google"
-                        (c-basic-offset . 4)
-                        (c-offsets-alist . ((innamespace . 0)
-                                            (access-label . -)
-                                            (case-label . 0)
-                                            (member-init-intro . +)
-                                            (topmost-intro . 0)))))
-
-(setq shell-file-name "/usr/bin/zsh")
+(setq shell-file-name "/usr/local/bin/zsh")
 
 (require-package 'markdown-mode)
 
 (require 'multi-term)
 (setq multi-term-program "/usr/bin/zsh")
 
-(require 'init-hydra)
+;;(require 'init-hydra)
 
 (require 'init-myblog)
 ;;(require 'init-orgpage)

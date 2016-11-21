@@ -1,7 +1,7 @@
 ;;====================================================================
 ;; Projectile
 (require-package 'projectile)
-(require-package 'helm-projectile)
+;;(require-package 'helm-projectile)
 ;;(setq projectile-indexing-method 'native)
 ;;(setq projectile-enable-caching t)
 
@@ -15,7 +15,50 @@
 
 (projectile-global-mode)
 
-(helm-projectile-on)
+;;(helm-projectile-on)
+
+;; for programming language
+(add-hook 'c-mode-common-hook
+          (lambda()
+            (set-fill-column 80)))
+
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(c-add-style "WebKit" '("Google"
+                        (c-basic-offset . 4)
+                        (c-offsets-alist . ((innamespace . 0)
+                                            (access-label . -)
+                                            (case-label . 0)
+                                            (member-init-intro . +)
+                                            (topmost-intro . 0)))))
+
+(add-hook 'java-mode-hook
+          (lambda()
+            (set-fill-column 100)
+            (setq c-basic-offset 4)))
+(add-hook 'prog-mode-hook
+          (lambda()
+            (fci-mode)
+            (setq c-basic-offset 4)
+            (semantic-mode)
+            (global-semantic-highlight-func-mode)
+            ;;(aggressive-indent-mode)
+            (yas-global-mode)))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+;;(add-to-list 'default-frame-alist '(font .  "Source Code Pro-10"))
+(set-face-attribute 'default nil
+                    :family "Source Code Pro"
+                    :height 105
+                    :weight 'normal
+                    :width 'normal)
+
+(require-package 'yasnippet)
+
+(require-package 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;;====================================================================
 ;; zeal

@@ -337,4 +337,7 @@ typical word processor."
   (add-hook 'htmlize-before-hook #'modi/htmlize-before-hook-fci-disable)
   (add-hook 'htmlize-after-hook #'modi/htmlize-after-hook-fci-enable-maybe))
 
+(require-package 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 (provide 'init-org)
