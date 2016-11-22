@@ -1,6 +1,7 @@
 ;;====================================================================
 ;; Projectile
 (require-package 'projectile)
+(require-package 'yasnippet)
 ;;(require-package 'helm-projectile)
 ;;(setq projectile-indexing-method 'native)
 ;;(setq projectile-enable-caching t)
@@ -36,6 +37,7 @@
           (lambda()
             (set-fill-column 100)
             (setq c-basic-offset 4)))
+
 (add-hook 'prog-mode-hook
           (lambda()
             (fci-mode)
@@ -43,7 +45,8 @@
             (semantic-mode)
             (global-semantic-highlight-func-mode)
             ;;(aggressive-indent-mode)
-            (yas-global-mode)))
+            (yas-global-mode 1)
+            ))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -54,8 +57,6 @@
                     :height 105
                     :weight 'normal
                     :width 'normal)
-
-(require-package 'yasnippet)
 
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)

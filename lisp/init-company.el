@@ -4,9 +4,7 @@
 (setq company-minimum-prefix-length 2)
 (setq company-idle-delay 0.0)
 
-(add-hook 'after-init-hook
-      (lambda()
-            (global-company-mode)))
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;;(defun my/python-mode-hook ()
 ;;   (add-to-list 'company-backends 'company-jedi))

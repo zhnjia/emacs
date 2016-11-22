@@ -1,6 +1,6 @@
 ;; TODO: link commits from vc-log to magit-show-commit
 ;; TODO: smerge-mode
-(require-package 'git-blame)
+(require-package 'git-blamed)
 (require-package 'gitignore-mode)
 (require-package 'gitconfig-mode)
 (require-package 'git-messenger) ;; Though see also vc-annotate's "n" & "p" bindings
@@ -32,12 +32,12 @@
 
 (setq vc-handled-backends (delq 'Git vc-handled-backends))
 
-
+
 ;; Convenient binding for vc-git-grep
 (global-set-key (kbd "C-x v f") 'vc-git-grep)
 
 
-
+
 ;;; git-svn support
 
 ;; (when (maybe-require-package 'magit-svn)
@@ -70,7 +70,7 @@
          (compilation-buffer-name-function (lambda (major-mode-name) "*git-svn*")))
     (compile (concat "git svn " command))))
 
-
+
 (require-package 'git-messenger)
 (global-set-key (kbd "C-x v p") #'git-messenger:popup-message)
 
