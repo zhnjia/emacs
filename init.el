@@ -22,7 +22,7 @@
 (require-package 'solarized-theme)
 (load-theme 'solarized-dark t)
 
-(require 'init-ido)
+;;(require 'init-ido)
 (require 'init-org)
 (require 'init-git)
 (require 'init-dash)
@@ -72,7 +72,7 @@
 
 (require 'init-alias)
 
-(setq shell-file-name "/usr/local/bin/zsh")
+(setq shell-file-name "/usr/bin/zsh")
 
 (require-package 'markdown-mode)
 

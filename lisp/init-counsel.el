@@ -2,6 +2,11 @@
 (require-package 'counsel-projectile)
 (counsel-projectile-on)
 
+;; config
+(require-package 'flx)
+(setq ivy-re-builders-alist
+      '((t . ivy--regex-fuzzy)))
+
 ;; M-x
 (global-set-key [remap execute-extended-command] 'counsel-M-x)
 
