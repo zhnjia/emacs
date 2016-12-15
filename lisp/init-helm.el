@@ -1,25 +1,29 @@
 (require-package 'helm)
-(require-package 'helm-gtags)
+;;(require-package 'helm-gtags)
 
 (custom-set-variables
- '(helm-gtags-suggested-key-mapping t)
- '(helm-gtags-auto-update t)
+ ;; '(helm-gtags-suggested-key-mapping t)
+ ;; '(helm-gtags-auto-update t)
  '(helm-autoresize-max-height 30))
 
-(eval-after-load "helm-gtags"
-  '(progn
-     (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)))
+;; helm-dash
+(require-package 'helm-dash)
+(setq helm-dash-browser-func 'eww)
 
-(helm-mode t)
-(helm-autoresize-mode 1)
+;;(eval-after-load "helm-gtags"
+;;  '(progn
+;;     (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)))
 
-(add-hook 'prog-mode-hook
- (lambda()
-  (helm-gtags-mode)))
+;;(helm-mode t)
+;;(helm-autoresize-mode 1)
 
-(require-package 'helm-ag)
-(global-set-key (kbd "M-?") 'helm-do-ag)
+;;(add-hook 'prog-mode-hook
+;;          (lambda()
+;;            (helm-gtags-mode)))
 
-(global-set-key (kbd "C-x M-s") 'helm-semantic)
+;;(require-package 'helm-ag)
+;;(global-set-key (kbd "M-?") 'helm-do-ag)
+;;
+;;(global-set-key (kbd "C-x M-s") 'helm-semantic)
 
 (provide 'init-helm)

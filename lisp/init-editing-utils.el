@@ -371,4 +371,7 @@ With arg N, insert N newlines."
 (setq which-key-idle-delay 0.4)
 (setq which-key-separator " → " )
 
+;; wgrep
+(require-package 'wgrep)
+
 (provide 'init-editing-utils)

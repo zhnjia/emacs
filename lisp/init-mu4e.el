@@ -3,14 +3,16 @@
 (require 'mu4e)
 
 (setq
- mu4e-maildir "~/.mailbox/INBOX/cur"
- mu4e-sent-folder "/sent"
- mu4e-drafts-folder "/drafts"
- mu4e-trash-folder "/trash"
- mu4e-refile-folder "/archive")
+ mu4e-maildir "~/.mailbox"
+ mu4e-sent-folder "/INBOX.Sent"
+ mu4e-drafts-folder "/INBOX.Drafts"
+ mu4e-trash-folder "/INBOX.Trash"
+ mu4e-refile-folder "/INBOX.Archive"
+ mu4e-user-mail-address-list '("jiaz@oupeng.com" "jiazhang@opera.com")
+ mu4e-attachment-dir  "~/Downloads")
 
 (setq mu4e-headers-fields
-      '( (:date          .  25)    ;; alternatively, use :human-date
+      '( (:date          .  25)    ;m; alternatively, use :human-date
          (:flags         .   6)
          (:from          .  22)
          (:subject       .  nil))) ;; alternatively, use :thread-subject
@@ -20,5 +22,7 @@
  mu4e-update-interval 300)
 
 (setq message-send-mail-function 'smtpmail-send-it)
+
+(setq mu4e-html2text-command "html2text -utf8 -width 72")
 
 (provide 'init-mu4e)

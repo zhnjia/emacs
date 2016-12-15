@@ -34,7 +34,7 @@
 ;;(require-package 'wgrep)
 (require 'init-paredit)
 (require 'init-lisp)
-;;(require 'init-mu4e)
+(require 'init-mu4e)
 ;;(require 'init-helm)
 (require 'init-counsel)
 (require 'init-ide)
@@ -58,9 +58,6 @@
 (require-package 'powerline)
 (powerline-default-theme)
 
-;;(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
-;;(require 'mu4e)
-
 ;;other
 (setq fci-rule-color "darkred")
 (setq default-cursor-type 'bar)
@@ -82,4 +79,7 @@
 ;;(require 'init-hydra)
 
 (require 'init-myblog)
+;;(require 'init-rmail)
 ;;(require 'init-orgpage)
+
+(setq large-file-warning-threshold 100000000)
