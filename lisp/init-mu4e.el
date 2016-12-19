@@ -15,7 +15,8 @@
       '( ("/drafts"      . ?d)
          ("/sent"        . ?s)
          ("/trash"       . ?t)
-         ("/flagged"     . ?f)
+         ("/bts"         . ?b)
+         ("/reviews"     . ?r)
          ("/all"         . ?a)))
 
 (setq mu4e-headers-fields
