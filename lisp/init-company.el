@@ -11,4 +11,7 @@
 
 ;;(add-hook 'python-mode-hook 'my/python-mode-hook)
 
+(require-package 'company-auctex)
+;;(company-auctex-init)
+
 (provide 'init-company)

@@ -340,4 +340,6 @@ typical word processor."
 (require-package 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+(require-package 'cdlatex)
+
 (provide 'init-org)
