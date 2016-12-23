@@ -266,6 +266,7 @@
   (require-package 'flycheck-package)
   (after-load 'flycheck
     (flycheck-package-setup)))
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 
 
@@ -299,5 +300,7 @@
     (when (fboundp 'aggressive-indent-indent-defun)
       (aggressive-indent-indent-defun))))
 
+(require-package 'emojify)
+(add-hook 'after-init-hook #'global-emojify-mode)
 
 (provide 'init-lisp)
