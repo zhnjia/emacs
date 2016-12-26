@@ -22,10 +22,8 @@
 (require-package 'solarized-theme)
 (load-theme 'solarized-dark t)
 
-;;(require 'init-ido)
 (require 'init-org)
 (require 'init-git)
-(require 'init-dash)
 
 (require-package 'diminish)
 (require 'init-isearch)
@@ -34,7 +32,7 @@
 ;;(require-package 'wgrep)
 (require 'init-paredit)
 (require 'init-lisp)
-(require 'init-mu4e)
+;;(require 'init-mu4e)
 ;;(require 'init-helm)
 (require 'init-counsel)
 (require 'init-ide)
@@ -73,8 +71,8 @@
 
 (require-package 'markdown-mode)
 
-(require 'multi-term)
-(setq multi-term-program "/usr/bin/zsh")
+;;(require 'multi-term)
+;;(setq multi-term-program "/usr/bin/zsh")
 
 ;;(require 'init-hydra)
 

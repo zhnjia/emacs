@@ -10,20 +10,18 @@
 (require-package 'helm-dash)
 (setq helm-dash-browser-func 'eww)
 
-;;(eval-after-load "helm-gtags"
-;;  '(progn
-;;     (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)))
+;; Support for the http://kapeli.com/dash documentation browser
+(defun sanityinc/dash-installed-p ()
+  "Return t if Dash is installed on this machine, or nil otherwise."
+  (let ((lsregister "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister"))
+    (and (file-executable-p lsregister)
+         (not (string-equal
+               ""
+               (shell-command-to-string
+                (concat lsregister " -dump|grep com.kapeli.dash")))))))
 
-;;(helm-mode t)
-;;(helm-autoresize-mode 1)
-
-;;(add-hook 'prog-mode-hook
-;;          (lambda()
-;;            (helm-gtags-mode)))
-
-;;(require-package 'helm-ag)
-;;(global-set-key (kbd "M-?") 'helm-do-ag)
-;;
-;;(global-set-key (kbd "C-x M-s") 'helm-semantic)
+(when (package-installed-p 'dash-at-point)
+  (global-set-key (kbd "C-c D") 'dash-at-point))
 
 (provide 'init-helm)
+;;;

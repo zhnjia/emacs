@@ -8,7 +8,6 @@
               (concat ";; Happy hacking " (or user-login-name "") " - Emacs ♥ you!\n\n"))
 
 
-
 ;; Make C-x C-e run 'eval-region if the region is active
 
 (defun sanityinc/eval-last-sexp-or-region (prefix)
@@ -33,7 +32,6 @@
     (with-current-buffer out-buffer-name
       (view-mode 1))))
 
-
 
 (defun sanityinc/maybe-set-bundled-elisp-readonly ()
   "If this elisp appears to be part of Emacs, then disallow editing."
@@ -44,7 +42,6 @@
 
 (add-hook 'emacs-lisp-mode-hook 'sanityinc/maybe-set-bundled-elisp-readonly)
 
-
 ;; Use C-c C-z to toggle between elisp files and an ielm session
 ;; I might generalise this to ruby etc., or even just adopt the repl-toggle package.
 
@@ -132,7 +129,6 @@
       (remove-hook 'pre-command-hook #'hl-sexp-unhighlight))))
 
 
-
 ;;; Support byte-compilation in a sub-process, as
 ;;; required by highlight-cl
 
@@ -238,18 +234,15 @@
     ad-do-it))
 
 
-
 (require-package 'macrostep)
 
 (after-load 'lisp-mode
   (define-key emacs-lisp-mode-map (kbd "C-c e") 'macrostep-expand))
 
-
 
 ;; A quick way to jump to the definition of a function given its key binding
 (global-set-key (kbd "C-h K") 'find-function-on-key)
 
-
 
 (when (maybe-require-package 'rainbow-mode)
   (defun sanityinc/enable-rainbow-mode-if-theme ()
@@ -261,7 +254,6 @@
 (when (maybe-require-package 'highlight-quoted)
   (add-hook 'emacs-lisp-mode-hook 'highlight-quoted-mode))
 
-
 (when (maybe-require-package 'flycheck)
   (require-package 'flycheck-package)
   (after-load 'flycheck
@@ -269,12 +261,12 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 
-
+
 ;; ERT
 (after-load 'ert
   (define-key ert-results-mode-map (kbd "g") 'ert-results-rerun-all-tests))
 
-
+
 (defun sanityinc/cl-libify-next ()
   "Find next symbol from 'cl and replace it with the 'cl-lib equivalent."
   (interactive)
@@ -299,8 +291,5 @@
       (insert "cl-")))
     (when (fboundp 'aggressive-indent-indent-defun)
       (aggressive-indent-indent-defun))))
-
-(require-package 'emojify)
-(add-hook 'after-init-hook #'global-emojify-mode)
 
 (provide 'init-lisp)

@@ -63,8 +63,8 @@
 
 ;;====================================================================
 ;; zeal
-(require-package 'zeal-at-point)
-(global-set-key "\C-cz" 'zeal-at-point)
+;;(require-package 'zeal-at-point)
+;;(global-set-key "\C-cz" 'zeal-at-point)
 ;;(add-to-list 'zeal-at-point-mode-alist '(java-mode . "android"))
 
 (provide 'init-ide)
