@@ -39,6 +39,7 @@
 
 ;;Company
 (require 'init-company)
+(require 'init-ycmd)
 
 ;;(require 'init-perspective)
 
@@ -81,3 +82,11 @@
 ;;(require 'init-orgpage)
 
 (setq large-file-warning-threshold 100000000)
+
+(require 'init-wc)
+
+(require 'init-whitespace)
+
+;; find-things-fast
+(load "~/pkg/find-things-fast/find-things-fast.el")
+(require 'find-things-fast)

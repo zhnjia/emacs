@@ -31,7 +31,8 @@
                                             (access-label . -)
                                             (case-label . 0)
                                             (member-init-intro . +)
-                                            (topmost-intro . 0)))))
+                                            (topmost-intro . 0)
+                                            (arglist-cont-nonempty . +)))))
 
 (add-hook 'java-mode-hook
           (lambda()

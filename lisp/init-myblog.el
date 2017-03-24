@@ -1,13 +1,15 @@
 (require 'ox-publish)
+(defvar myblog-base-directory "~/Documents/org/zhnjia.github.io/_org"
+  "Path to org files.")
+(defvar myblog-publishing-diretory "~/Documents/org/zhnjia.github.io/"
+  "Path to Jekyll project.")
+
 (setq org-publish-project-alist
       '(
         ("org-ianbarton"
-         ;; Path to your org files.
-         :base-directory "~/org/zhnjia.github.io/_org/"
+         :base-directory "~/Documents/org/zhnjia.github.io/_org"
          :base-extension "org"
-
-         ;; Path to your Jekyll project.
-         :publishing-directory "~/org/zhnjia.github.io/"
+         :publishing-directory "~/Documents/org/zhnjia.github.io/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 4
@@ -17,9 +19,9 @@
 
 
         ("org-static-ian"
-         :base-directory "~/org/zhnjia.github.io/_org/"
+         :base-directory "~/Documents/org/zhnjia.github.io/_org"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
-         :publishing-directory "~/org/myblog/"
+         :publishing-directory"~/Documents/org/zhnjia.github.io/"
          :recursive t
          :publishing-function org-publish-attachment)
 

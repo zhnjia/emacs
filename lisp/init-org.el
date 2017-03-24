@@ -317,9 +317,10 @@ typical word processor."
      (python . t)
      (ruby . t)
      (screen . nil)
-     (sh . t)
+     (shell . t)
      (sql . nil)
-     (sqlite . t))))
+     (sqlite . t)
+     (plantuml . t))))
 
 (with-eval-after-load 'fill-column-indicator
   (defvar modi/htmlize-initial-fci-state nil
@@ -341,5 +342,8 @@ typical word processor."
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (require-package 'cdlatex)
+
+(setq org-plantuml-jar-path
+      (expand-file-name "~/pkg/plantuml.jar"))
 
 (provide 'init-org)

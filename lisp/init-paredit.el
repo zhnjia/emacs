@@ -49,10 +49,10 @@
 ;; Enable some handy paredit functions in all prog modes
 ;; ----------------------------------------------------------------------------
 
-(require-package 'paredit-everywhere)
-(add-hook 'prog-mode-hook 'paredit-everywhere-mode)
-(add-hook 'css-mode-hook 'paredit-everywhere-mode)
-(after-load 'paredit-everywhere
-  (define-key paredit-everywhere-mode-map [remap kill-sentence] 'paredit-kill))
+;(require-package 'paredit-everywhere)
+;(add-hook 'prog-mode-hook 'paredit-everywhere-mode)
+;(add-hook 'css-mode-hook 'paredit-everywhere-mode)
+;(after-load 'paredit-everywhere
+;  (define-key paredit-everywhere-mode-map [remap kill-sentence] 'paredit-kill))
 
 (provide 'init-paredit)

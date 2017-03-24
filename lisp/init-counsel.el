@@ -20,10 +20,10 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c M-r") 'ivy-resume)
+(global-set-key (kbd "C-c r") 'ivy-resume)
 
 ;; imenu
-(global-set-key (kbd "C-c M-i") 'counsel-imenu)
+(global-set-key (kbd "C-c i") 'counsel-imenu)
 
 ;; dash
 ;;(require-package 'counsel-dash)

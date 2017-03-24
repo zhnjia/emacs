@@ -2,7 +2,7 @@
 ;;(require-package 'company-jedi)
 
 (setq company-minimum-prefix-length 2)
-(setq company-idle-delay 0.0)
+;;(setq company-idle-delay 0.0)
 
 (add-hook 'after-init-hook 'global-company-mode)
 
