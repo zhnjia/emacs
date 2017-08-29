@@ -5,6 +5,7 @@
 (require-package 'gitconfig-mode)
 (require-package 'git-messenger) ;; Though see also vc-annotate's "n" & "p" bindings
 (require-package 'git-timemachine)
+(require-package 'ido-completing-read+)
 
 
 (when (maybe-require-package 'magit)
@@ -73,6 +74,7 @@
 
 (require-package 'git-messenger)
 (global-set-key (kbd "C-x v p") #'git-messenger:popup-message)
+(setq magit-completing-read-function 'magit-ido-completing-read)
 
 
 (provide 'init-git)
