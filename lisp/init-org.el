@@ -343,6 +343,9 @@ typical word processor."
 
 (require-package 'cdlatex)
 
+(custom-set-faces
+ '(org-table ((t (:family "Ubuntu Mono")))))
+
 (setq org-plantuml-jar-path
       (expand-file-name "~/pkg/plantuml.jar"))
 

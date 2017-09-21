@@ -7,7 +7,8 @@
 (setq default-input-method "pyim")
 (setq pyim-default-scheme 'quanpin)
 (setq pyim-page-tooltip 'pos-tip)
-(setq pyim-page-style 'one-line)
+(setq x-gtk-use-system-tooltips t)
+;;(setq pyim-page-style 'one-line)
 (setq pyim-page-length 10)
 
 (setq pyim-dicts
@@ -15,5 +16,7 @@
 
 (add-hook 'emacs-startup-hook
           #'(lambda () (pyim-restart-1 t)))
+
+(global-set-key (kbd "C-SPC") 'toggle-input-method)
 
 (provide 'init-pyim)

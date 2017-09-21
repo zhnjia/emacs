@@ -19,8 +19,11 @@
 (require 'init-elpa)
 
 ;;Theme
-(require-package 'solarized-theme)
-(load-theme 'solarized-dark t)
+;;(require-package 'solarized-theme)
+;;(load-theme 'solarized-dark t)
+;;(load-theme 'misterioso)
+(require-package 'madhat2r-theme)
+(load-theme 'madhat2r t)
 
 (require 'init-org)
 (require 'init-git)
@@ -85,10 +88,11 @@
 
 (require 'init-wc)
 
-(require 'init-whitespace)
+;;(require 'init-whitespace)
 
 (require 'init-pyim)
 
 ;; find-things-fast
 (load "~/pkg/find-things-fast/find-things-fast.el")
 (require 'find-things-fast)
+
