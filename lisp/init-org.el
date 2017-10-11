@@ -349,4 +349,7 @@ typical word processor."
 (setq org-plantuml-jar-path
       (expand-file-name "~/pkg/plantuml.jar"))
 
+(eval-after-load "org"
+  '(require 'ox-md nil t))
+
 (provide 'init-org)

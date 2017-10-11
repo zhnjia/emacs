@@ -1,3 +1,4 @@
+(require-package 'htmlize)
 (require 'ox-publish)
 (defvar myblog-base-directory "~/Documents/org/zhnjia.github.io/_org"
   "Path to org files.")
@@ -11,7 +12,7 @@
          :base-extension "org"
          :publishing-directory "~/Documents/org/zhnjia.github.io/"
          :recursive t
-         :publishing-function org-html-publish-to-html
+         :publishing-function org-md-publish-to-md
          :headline-levels 4
          :html-extension "html"
          :body-only t ;; Only export section between <body> </body>
