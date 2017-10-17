@@ -7,9 +7,6 @@
 (setq ivy-re-builders-alist
       '((read-file-name-internal . ivy--regex-fuzzy)
         (t . ivy--regex-plus)))
-(global-set-key (kbd "C-c k") 'counsel-ag)
-(global-set-key (kbd "C-c g") 'counsel-git)
-(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
 (setq ivy-count-format "(%d/%d) ")
 
 ;; M-x
@@ -20,10 +17,14 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c r") 'ivy-resume)
 
-;; imenu
-(global-set-key (kbd "C-c i") 'counsel-imenu)
+(define-prefix-command 'counsel-command-map)
+(global-set-key (kbd "C-x c") 'counsel-command-map)
+(define-key counsel-command-map (kbd "f") 'counsel-git)
+(define-key counsel-command-map (kbd "g") 'counsel-git-grep)
+(define-key counsel-command-map (kbd "i") 'counsel-imenu)
+(define-key counsel-command-map (kbd "k") 'counsel-ag)
+(define-key counsel-command-map (kbd "r") 'ivy-resume)
 
 ;; dash
 ;;(require-package 'counsel-dash)
