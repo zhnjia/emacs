@@ -92,7 +92,4 @@
 
 (require 'init-pyim)
 
-;; find-things-fast
-(load "~/pkg/find-things-fast/find-things-fast.el")
-(require 'find-things-fast)
-
+(desktop-save-mode 1)
