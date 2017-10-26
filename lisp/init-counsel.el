@@ -1,6 +1,6 @@
 ;; projectile
-(require-package 'counsel-projectile)
-(counsel-projectile-on)
+;;(require-package 'counsel-projectile)
+;;(counsel-projectile-on)
 
 ;; config
 (require-package 'flx)
