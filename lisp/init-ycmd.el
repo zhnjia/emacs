@@ -18,12 +18,12 @@
 (add-hook 'c++-mode-hook 'flycheck-mode)
 
 ;; Replace the directory information with where you downloaded ycmd to
-(set-variable 'ycmd-server-command (list "python" "/home/jiazhang/pkg/ycmd/ycmd/__main__.py"))
+(set-variable 'ycmd-server-command (list "python" "/home/jiazhang/Pkg/ycmd/ycmd/__main__.py"))
 
 ;; Edit according to where you have your Chromium/Blink checkout
 (set-variable 'ycmd-extra-conf-whitelist '("/home/jiazhang/workspace/chromium/.ycm_extra_conf.py"))
 
-(set-variable 'ycmd-global-config "/home/jiazhang/pkg/ycmd/cpp/ycm/.ycm_extra_conf.py")
+(set-variable 'ycmd-global-config "/home/jiazhang/Pkg/ycmd/cpp/ycm/.ycm_extra_conf.py")
 
 ;; Show flycheck errors in idle-mode as well
 (setq ycmd-parse-conditions '(save new-line mode-enabled idle-change))

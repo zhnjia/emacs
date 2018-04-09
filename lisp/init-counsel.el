@@ -10,7 +10,7 @@
 (setq ivy-count-format "(%d/%d) ")
 
 ;; M-x
-(global-set-key [remap execute-extended-command] 'counsel-M-x)
+;;(global-set-key [remap execute-extended-command] 'counsel-M-x)
 
 ;; swiper
 (require-package 'swiper)
@@ -18,13 +18,13 @@
 (setq ivy-use-virtual-buffers t)
 (global-set-key "\C-s" 'swiper)
 
-(define-prefix-command 'counsel-command-map)
-(global-set-key (kbd "C-x c") 'counsel-command-map)
-(define-key counsel-command-map (kbd "f") 'counsel-git)
-(define-key counsel-command-map (kbd "g") 'counsel-git-grep)
-(define-key counsel-command-map (kbd "i") 'counsel-imenu)
-(define-key counsel-command-map (kbd "k") 'counsel-ag)
-(define-key counsel-command-map (kbd "r") 'ivy-resume)
+;;(define-prefix-command 'counsel-command-map)
+;;(global-set-key (kbd "C-x c") 'counsel-command-map)
+;;(define-key counsel-command-map (kbd "f") 'counsel-git)
+;;(define-key counsel-command-map (kbd "g") 'counsel-git-grep)
+;;(define-key counsel-command-map (kbd "i") 'counsel-imenu)
+;;(define-key counsel-command-map (kbd "k") 'counsel-ag)
+;;(define-key counsel-command-map (kbd "r") 'ivy-resume)
 
 ;; dash
 ;;(require-package 'counsel-dash)

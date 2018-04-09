@@ -25,7 +25,7 @@
 (require-package 'madhat2r-theme)
 (load-theme 'madhat2r t)
 
-(require 'init-org)
+;;(require 'init-org)
 (require 'init-git)
 
 (require-package 'diminish)
@@ -36,8 +36,8 @@
 (require 'init-paredit)
 (require 'init-lisp)
 ;;(require 'init-mu4e)
-;;(require 'init-helm)
-(require 'init-counsel)
+(require 'init-helm)
+;;(require 'init-counsel)
 (require 'init-ide)
 
 ;;Company
@@ -57,8 +57,6 @@
 (require-package 'json-reformat)
 
 ;; powerline
-(require-package 'powerline)
-(powerline-default-theme)
 
 ;;other
 (setq fci-rule-color "darkred")
@@ -90,6 +88,9 @@
 
 ;;(require 'init-whitespace)
 
-(require 'init-pyim)
+;;(require 'init-pyim)
+
+;;(require-package 'powerline)
+;;(powerline-default-theme)
 
 (desktop-save-mode 1)
