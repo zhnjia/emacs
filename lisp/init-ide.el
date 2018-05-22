@@ -51,11 +51,12 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '(("\\.h\\'" . c++-mode)
+                                ("\\.groovy\\'" . groovy-mode)))
 ;;(add-to-list 'default-frame-alist '(font .  "Source Code Pro-10"))
 (set-face-attribute 'default nil
-                    :family "Source Code Variable"
-                    :height 100
+                    :family "Hack"
+                    :height 90
                     :weight 'normal
                     :width 'normal)
 
