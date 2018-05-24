@@ -93,4 +93,5 @@
 ;;(require-package 'powerline)
 ;;(powerline-default-theme)
 
-(desktop-save-mode 1)
+;;(desktop-save-mode 1)
+(require 'gn-mode)

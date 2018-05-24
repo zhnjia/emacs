@@ -51,8 +51,7 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(add-to-list 'auto-mode-alist '(("\\.h\\'" . c++-mode)
-                                ("\\.groovy\\'" . groovy-mode)))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;;(add-to-list 'default-frame-alist '(font .  "Source Code Pro-10"))
 (set-face-attribute 'default nil
                     :family "Hack"
@@ -68,5 +67,8 @@
 ;;(require-package 'zeal-at-point)
 ;;(global-set-key "\C-cz" 'zeal-at-point)
 ;;(add-to-list 'zeal-at-point-mode-alist '(java-mode . "android"))
+
+(require-package 'groovy-mode)
+(add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
 
 (provide 'init-ide)
