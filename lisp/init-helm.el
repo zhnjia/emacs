@@ -40,9 +40,9 @@
 (global-set-key (kbd "C-x b") 'helm-mini)
 
 (setq helm-autoresize-max-height 30)
-(helm-autoresize-mode 1)
 
 (helm-mode 1)
+(helm-autoresize-mode 1)
 
 (provide 'init-helm)
 ;;;

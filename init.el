@@ -43,6 +43,7 @@
 ;;Company
 (require 'init-company)
 (require 'init-ycmd)
+(require 'init-meghanada)
 
 ;;(require 'init-perspective)
 
