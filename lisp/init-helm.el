@@ -38,6 +38,7 @@
 
 (global-set-key (kbd "C-c G") 'helm-grep-do-git-grep)
 (global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-b") 'helm-mini)
 
 (setq helm-autoresize-max-height 30)
 
