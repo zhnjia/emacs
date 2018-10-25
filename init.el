@@ -25,7 +25,7 @@
 (require-package 'madhat2r-theme)
 (load-theme 'madhat2r t)
 
-;;(require 'init-org)
+(require 'init-org)
 (require 'init-git)
 
 (require-package 'diminish)
