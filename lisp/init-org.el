@@ -27,4 +27,8 @@
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
+(custom-set-variables
+ '(org-enforce-todo-dependencies t)
+ '(org-agenda-dim-blocked-tasks t))
+
 (provide 'init-org)
