@@ -74,7 +74,7 @@
 
 (require-package 'git-messenger)
 (global-set-key (kbd "C-x v p") #'git-messenger:popup-message)
-(setq magit-completing-read-function 'magit-ido-completing-read)
+(setq magit-completing-read-function 'helm--completing-read-default)
 
 
 (provide 'init-git)
