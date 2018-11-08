@@ -74,7 +74,12 @@
 
 (require-package 'git-messenger)
 (global-set-key (kbd "C-x v p") #'git-messenger:popup-message)
-(setq magit-completing-read-function 'helm--completing-read-default)
+
+;; helm completing
+;;(setq magit-completing-read-function 'helm--completing-read-default)
+
+;; ivy completing
+(setq magit-completing-read-function 'ivy-completing-read)
 
 
 (provide 'init-git)

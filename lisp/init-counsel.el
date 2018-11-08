@@ -16,15 +16,25 @@
 (require-package 'swiper)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
 (global-set-key "\C-s" 'swiper)
 
-;;(define-prefix-command 'counsel-command-map)
-;;(global-set-key (kbd "C-x c") 'counsel-command-map)
-;;(define-key counsel-command-map (kbd "f") 'counsel-git)
-;;(define-key counsel-command-map (kbd "g") 'counsel-git-grep)
-;;(define-key counsel-command-map (kbd "i") 'counsel-imenu)
-;;(define-key counsel-command-map (kbd "k") 'counsel-ag)
-;;(define-key counsel-command-map (kbd "r") 'ivy-resume)
+;; counsel
+(require-package 'counsel)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(define-prefix-command 'counsel-command-map)
+(global-set-key (kbd "C-x c") 'counsel-command-map)
+(define-key counsel-command-map (kbd "f") 'counsel-git)
+(define-key counsel-command-map (kbd "g") 'counsel-git-grep)
+(define-key counsel-command-map (kbd "i") 'counsel-imenu)
+(define-key counsel-command-map (kbd "k") 'counsel-ag)
+(define-key counsel-command-map (kbd "r") 'ivy-resume)
+
+;; ivy-rich
+(require-package 'ivy-rich)
+(ivy-rich-mode 1)
+(setq ivy-rich-path-style 'abbrev)
 
 ;; dash
 ;;(require-package 'counsel-dash)

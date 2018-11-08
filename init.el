@@ -36,8 +36,8 @@
 (require 'init-paredit)
 (require 'init-lisp)
 ;;(require 'init-mu4e)
-(require 'init-helm)
-;;(require 'init-counsel)
+;;(require 'init-helm)
+(require 'init-counsel)
 (require 'init-ide)
 
 ;;Company
