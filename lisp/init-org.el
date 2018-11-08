@@ -3,7 +3,7 @@
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Workspace/doc/works.org" "Tasks")
-         "* TODO %?\n  %i\n")))
+         "* TODO [#C] %?\n  %i\n")))
 
 ;; org todo
 ;;(setq org-todo-keywords
