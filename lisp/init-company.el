@@ -14,4 +14,6 @@
 (require-package 'company-auctex)
 ;;(company-auctex-init)
 
+(setq company-dabbrev-downcase nil)
+
 (provide 'init-company)
