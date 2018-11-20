@@ -1,9 +1,11 @@
 
-(setq org-agenda-files '("~/Workspace/doc/works.org"))
+(setq org-agenda-files '("~/Workspace/doc/works.org" "~/Workspace/doc/huawei.org"))
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Workspace/doc/works.org" "Tasks")
-         "* TODO [#C] %?\n  %i\n")))
+         "* TODO [#C] %?\n  %i\n")
+        ("h" "Huawei" entry (file+headline "~/Workspace/doc/huawei.org" "Huawei")
+         "* TODO [#A] %?\n %i\n")))
 
 ;; org todo
 ;;(setq org-todo-keywords
@@ -30,5 +32,12 @@
 (custom-set-variables
  '(org-enforce-todo-dependencies t)
  '(org-agenda-dim-blocked-tasks t))
+
+(define-prefix-command 'org-command-map)
+(global-set-key (kbd "C-c o") 'org-command-map)
+(define-key org-command-map (kbd "t") 'org-todo-list)
+(define-key org-command-map (kbd "c") 'org-capture)
+(define-key org-command-map (kbd "a") 'org-agenda)
+(define-key org-command-map (kbd "p") 'org-priority)
 
 (provide 'init-org)
