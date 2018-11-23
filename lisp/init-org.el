@@ -7,6 +7,16 @@
         ("h" "Huawei" entry (file+headline "~/Workspace/doc/huawei.org" "Huawei")
          "* TODO [#A] %?\n %i\n")))
 
+;; plantuml
+;; active Org-babel languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(;; other Babel languages
+   (plantuml . t)))
+
+(setq org-plantuml-jar-path
+      (expand-file-name "~/Pkg/plantuml.jar"))
+
 ;; org todo
 ;;(setq org-todo-keywords
 ;;      '((sequence "TODO(t)" "|" "DONE(d)")
