@@ -8,6 +8,7 @@
       '((read-file-name-internal . ivy--regex-fuzzy)
         (t . ivy--regex-plus)))
 (setq ivy-count-format "(%d/%d) ")
+(setq ivy-height 20)
 
 ;; M-x
 ;;(global-set-key [remap execute-extended-command] 'counsel-M-x)
@@ -35,6 +36,9 @@
 (require-package 'ivy-rich)
 (ivy-rich-mode 1)
 (setq ivy-rich-path-style 'abbrev)
+
+;; ivy-hydra
+;;(require-package 'ivy-hydra)
 
 ;; dash
 ;;(require-package 'counsel-dash)
