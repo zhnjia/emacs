@@ -1,22 +1,5 @@
 ;;====================================================================
-;; Projectile
-;;(require-package 'projectile)
 (require-package 'yasnippet)
-;;(require-package 'helm-projectile)
-;;(setq projectile-indexing-method 'native)
-;;(setq projectile-enable-caching t)
-
-;;(defvar my-project-name nil)
-;;(put 'my-project-name 'safe-local-variable #'stringp)
-;;
-;;(defun projectile-project-name--prefer-mine (orig-fun &rest args)
-;;  (or my-project-name (apply orig-fun args)))
-;;
-;;(advice-add 'projectile-project-name :around #'projectile-project-name--prefer-mine)
-;;
-;;(projectile-global-mode)
-
-;;(helm-projectile-on)
 
 ;; for programming language
 (add-hook 'c-mode-common-hook
@@ -70,5 +53,14 @@
 
 (require-package 'groovy-mode)
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
+
+;; Printer
+(setq ps-multibyte-buffer 'bdf-font-except-latin)
+;; sudo apt-get install emacs-intl-fonts
+;; 在 ubuntu 里字体的位置不是默认的/usr/local/share/emacs/fonts/bdf
+;; 而是/usr/share/emacs/fonts/bdf
+(add-to-list 'bdf-directory-list "/usr/share/emacs/fonts/bdf")
+(setq ps-font-family 'Courier)
+(setq ps-paper-type 'a4)
 
 (provide 'init-ide)
