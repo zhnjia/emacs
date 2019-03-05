@@ -39,8 +39,8 @@
 (set-face-attribute 'default nil
                     :family "Hack"
                     :height 100
-                    :weight 'normal
-                    :width 'normal)
+                    :weight 'extra-light
+                    :width 'condensed)
 
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
