@@ -28,7 +28,7 @@
 (global-set-key (kbd "C-x c") 'counsel-command-map)
 (define-key counsel-command-map (kbd "f") 'counsel-git)
 (define-key counsel-command-map (kbd "g") 'counsel-git-grep)
-(define-key counsel-command-map (kbd "i") 'counsel-imenu)
+(define-key counsel-command-map (kbd "i") 'counsel-semantic-or-imenu)
 (define-key counsel-command-map (kbd "k") 'counsel-ag)
 (define-key counsel-command-map (kbd "r") 'ivy-resume)
 

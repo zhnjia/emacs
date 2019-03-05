@@ -4,6 +4,9 @@
 (setq company-minimum-prefix-length 2)
 ;;(setq company-idle-delay 0.0)
 
+;; Show completions after 0.15 seconds
+(setq company-idle-delay 0.15)
+
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;;(defun my/python-mode-hook ()

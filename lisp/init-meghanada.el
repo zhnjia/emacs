@@ -1,10 +1,9 @@
-(require 'meghanada)
+(require-package 'meghanada)
 (add-hook 'java-mode-hook
           (lambda ()
             ;; meghanada-mode on
             (meghanada-mode t)
             (flycheck-mode +1)
-            ;; use code format
             ))
 ;; (cond
 ;;  ((eq system-type 'windows-nt)

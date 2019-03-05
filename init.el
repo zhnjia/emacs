@@ -97,7 +97,14 @@
 ;;(desktop-save-mode 1)
 (require 'gn-mode)
 
+(require 'init-gradle-opera)
+
 ;;(require 'init-calendar)
 (require 'auto-save)
 (auto-save-enable)
 (setq auto-save-silent t)
+;; (setq auto-save-delete-trailing-whitespace t)
+
+(setq inhibit-startup-screen t)
+(split-window-horizontally 30)
+(find-file "~/Workspace/doc/works.org")
