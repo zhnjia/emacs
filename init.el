@@ -1,7 +1,11 @@
+;;; Package --- init.el
+;;; Commentary:
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
+;;; Code:
 (package-initialize)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -57,7 +61,6 @@
 (require-package 'goto-chg)
 (require-package 'json-reformat)
 
-;; powerline
 
 ;;other
 (setq fci-rule-color "darkred")
@@ -91,8 +94,8 @@
 
 ;;(require 'init-pyim)
 
-;;(require-package 'powerline)
-;;(powerline-default-theme)
+;; (require-package 'powerline)
+;; (powerline-default-theme)
 
 ;;(desktop-save-mode 1)
 (require 'gn-mode)
@@ -104,6 +107,8 @@
 (auto-save-enable)
 (setq auto-save-silent t)
 ;; (setq auto-save-delete-trailing-whitespace t)
+
+(require 'init-projectile)
 
 (setq inhibit-startup-screen t)
 (split-window-horizontally 30)

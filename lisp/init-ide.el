@@ -38,8 +38,8 @@
 ;;(add-to-list 'default-frame-alist '(font .  "Source Code Pro-10"))
 (set-face-attribute 'default nil
                     :family "Hack"
-                    :height 100
-                    :weight 'extra-light
+                    :height 90
+                    :weight 'ultra-light
                     :width 'condensed)
 
 (require-package 'rainbow-delimiters)
