@@ -111,5 +111,4 @@
 (require 'init-projectile)
 
 (setq inhibit-startup-screen t)
-(split-window-horizontally 30)
-(find-file "~/Workspace/doc/works.org")
+

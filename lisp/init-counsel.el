@@ -30,6 +30,8 @@
 (define-key counsel-command-map (kbd "g") 'counsel-git-grep)
 (define-key counsel-command-map (kbd "i") 'counsel-semantic-or-imenu)
 (define-key counsel-command-map (kbd "k") 'counsel-ag)
+(define-key counsel-command-map (kbd "o") 'counsel-org-capture)
+(define-key counsel-command-map (kbd "l") 'counsel-outline)
 (define-key counsel-command-map (kbd "r") 'ivy-resume)
 
 ;; ivy-rich
