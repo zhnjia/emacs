@@ -23,7 +23,7 @@
             (setq c-basic-offset 4)))
 
 (add-hook 'prog-mode-hook
-          (lambda()
+          (lambda ()
             (fci-mode)
             (setq c-basic-offset 4)
             (semantic-mode)
@@ -53,6 +53,7 @@
 
 (require-package 'groovy-mode)
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
+(setq groovy-indent-offset 2)
 
 ;; Printer
 (setq ps-multibyte-buffer 'bdf-font-except-latin)

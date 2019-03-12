@@ -5,7 +5,7 @@
 (require-package 'projectile)
 
 (projectile-mode +1)
-(define-key projectile-mode-map (kbd "s-,") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (setq projectile-git-command "/usr/bin/git ls-files -zc --exclude-standard")
 (setq projectile-completion-system 'ivy)
 

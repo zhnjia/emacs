@@ -100,7 +100,7 @@
 ;;(desktop-save-mode 1)
 (require 'gn-mode)
 
-(require 'init-gradle-opera)
+;; (require 'init-gradle-opera)
 
 ;;(require 'init-calendar)
 (require 'auto-save)
