@@ -120,13 +120,13 @@
 ;; Highlight current sexp
 ;; ----------------------------------------------------------------------------
 
-(require-package 'hl-sexp)
-
-;; Prevent flickery behaviour due to hl-sexp-mode unhighlighting before each command
-(after-load 'hl-sexp
-  (defadvice hl-sexp-mode (after unflicker (&optional turn-on) activate)
-    (when turn-on
-      (remove-hook 'pre-command-hook #'hl-sexp-unhighlight))))
+; (require-package 'hl-sexp)
+;
+; ;; Prevent flickery behaviour due to hl-sexp-mode unhighlighting before each command
+; (after-load 'hl-sexp
+;   (defadvice hl-sexp-mode (after unflicker (&optional turn-on) activate)
+;     (when turn-on
+;       (remove-hook 'pre-command-hook #'hl-sexp-unhighlight))))
 
 
 ;;; Support byte-compilation in a sub-process, as
@@ -153,7 +153,7 @@
 (after-load 'redshank
   (diminish 'redshank-mode))
 
-(maybe-require-package 'aggressive-indent)
+;;(maybe-require-package 'aggressive-indent)
 
 (defun sanityinc/lisp-setup ()
   "Enable features useful in any Lisp mode."

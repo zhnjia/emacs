@@ -1,5 +1,6 @@
 ;;====================================================================
 (require-package 'yasnippet)
+(require-package 'yasnippet-snippets)
 
 ;; for programming language
 (add-hook 'c-mode-common-hook
@@ -29,7 +30,7 @@
             (semantic-mode)
             (global-semantic-highlight-func-mode)
             ;;(aggressive-indent-mode)
-            (yas-global-mode 1)
+            (yas-minor-mode 1)
             ))
 
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -63,5 +64,9 @@
 (add-to-list 'bdf-directory-list "/usr/share/emacs/fonts/bdf")
 (setq ps-font-family 'Courier)
 (setq ps-paper-type 'a4)
+
+;; indent guide
+(require-package 'indent-guide)
+(indent-guide-global-mode)
 
 (provide 'init-ide)
