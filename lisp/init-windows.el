@@ -16,4 +16,14 @@
 ;;(require-package 'window-numbering)
 ;;(window-numbering-mode)
 
+;;Theme
+(require-package 'solarized-theme)
+(load-theme 'solarized-dark t)
+
+;; mode line
+(require-package 'smart-mode-line)
+(setq sml/theme 'respectful)
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
+
 (provide 'init-windows)
