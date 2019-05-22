@@ -65,8 +65,4 @@
 (setq ps-font-family 'Courier)
 (setq ps-paper-type 'a4)
 
-;; indent guide
-(require-package 'indent-guide)
-(indent-guide-global-mode)
-
 (provide 'init-ide)
