@@ -363,7 +363,7 @@ With arg N, insert N newlines."
 (require-package 'wgrep)
 
 ;; scroll
-(global-set-key (kbd "M-p") 'scroll-up-line)
-(global-set-key (kbd "M-n") 'scroll-down-line)
+(global-set-key (kbd "M-p") 'scroll-down-line)
+(global-set-key (kbd "M-n") 'scroll-up-line)
 
 (provide 'init-editing-utils)
