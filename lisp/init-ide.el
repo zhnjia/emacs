@@ -38,10 +38,11 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;;(add-to-list 'default-frame-alist '(font .  "Source Code Pro-10"))
 (set-face-attribute 'default nil
-                    :family "Hack"
+                    :family "DejaVu Sans Mono"
                     :height 90
                     :weight 'ultra-light
                     :width 'condensed)
+(setq-default line-spacing 0.3)
 
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)

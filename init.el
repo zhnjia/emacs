@@ -57,7 +57,7 @@
 
 ;;other
 (setq fci-rule-color "darkred")
-(setq default-cursor-type 'bar)
+(setq-default cursor-type 'bar)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
