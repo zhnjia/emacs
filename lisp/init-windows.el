@@ -17,8 +17,10 @@
 ;;(window-numbering-mode)
 
 ;;Theme
-(require-package 'solarized-theme)
-(load-theme 'solarized-dark t)
+;;(require-package 'solarized-theme)
+;;(load-theme 'solarized-dark t)
+(require-package 'spacemacs-theme)
+(load-theme 'spacemacs-dark t)
 
 ;; mode line
 (require-package 'smart-mode-line)

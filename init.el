@@ -87,8 +87,8 @@
 
 ;;(require 'init-pyim)
 
-;; (require-package 'powerline)
-;; (powerline-default-theme)
+(require-package 'powerline)
+(powerline-default-theme)
 
 ;;(desktop-save-mode 1)
 (require 'gn-mode)

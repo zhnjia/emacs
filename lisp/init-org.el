@@ -3,9 +3,7 @@
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Workspace/doc/works.org" "Tasks")
-         "* TODO [#C] %?\n  %i\n")
-        ("h" "Huawei" entry (file+headline "~/Workspace/doc/huawei.org" "Huawei")
-         "* TODO [#A] %?\n %i\n")))
+         "* TODO [#C] %?\n  %i\n")))
 
 ;; plantuml
 ;; active Org-babel languages
