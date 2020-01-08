@@ -44,6 +44,11 @@
                     :width 'condensed)
 (setq-default line-spacing 0.3)
 
+(custom-theme-set-faces
+ 'user
+ '(variable-pitch ((t (:family "Ubuntu Mono" :height 100 :weight light)))))
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
