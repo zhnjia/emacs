@@ -1,9 +1,27 @@
 
-(setq org-agenda-files '("~/Workspace/doc/works.org" "~/Workspace/doc/huawei.org"))
+(setq org-agenda-files '("~/Workspace/doc/works.org"))
 
+;; org-capture-templates
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/Workspace/doc/works.org" "Tasks")
-         "* TODO [#C] %?\n  %i\n")))
+      '(("t" "General Todo" entry (file+headline "~/Workspace/doc/works.org" "Tasks")
+         "** TODO [#A] %?\n")
+        ("a" "ADX tasks" entry (file+olp "~/Workspace/doc/works.org" "Tasks" "AdTech" "ADX")
+         "**** TODO [#A] %?\n")
+        ("m" "Mytarget tasks" entry (file+olp "~/Workspace/doc/works.org" "Tasks" "AdTeck" "Mytarget")
+         "**** TODO [#A] %?\n")
+        ("y" "Yandex tasks" entry (file+olp "~/Workspace/doc/works.org" "Tasks" "AdTech" "Yandex")
+         "**** TODO [#A] %?\n")
+        ("f" "Fyber tasks" entry (file+olp "~/Workspace/doc/works.org" "Tasks" "AdTech" "Fyber")
+         "**** TODO [#A] %?\n")
+        ("b" "Facebook tasks" entry (file+olp "~/Workspace/doc/works.org" "Tasks" "AdTech" "Facebook")
+         "**** TODO [#A] %?\n")
+        ("g" "Generic ADs tasks" entry (file+olp "~/Workspace/doc/works.org" "Tasks" "AdTech" "Generic")
+         "**** TODO [#A] %?\n")))
+
+(setq org-agenda-window-setup (quote current-window))
+
+# COOKIE_DATA
+(setq org-hierarchical-checkbox-statistics t)
 
 ;; plantuml
 ;; active Org-babel languages
@@ -40,6 +58,16 @@
 (custom-set-variables
  '(org-enforce-todo-dependencies t)
  '(org-agenda-dim-blocked-tasks t))
+
+(setq org-log-note-headings '((done        . "CLOSING NOTE %t")
+                              (state       . "State %-12s from %-12S %t")
+                              (note        . "Note taken on %T")
+                              (reschedule  . "Schedule changed on %t: %S -> %s")
+                              (delschedule . "Not scheduled, was %S on %t")
+                              (redeadline  . "Deadline changed on %t: %S -> %s")
+                              (deldeadline . "Removed deadline, was %S on %t")
+                              (refile      . "Refiled on %t")
+                              (clock-out   . "")))
 
 (define-prefix-command 'org-command-map)
 (global-set-key (kbd "C-c o") 'org-command-map)

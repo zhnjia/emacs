@@ -23,6 +23,7 @@
 (require 'init-elpa)
 
 (require 'init-org)
+(require 'setup-htmlize)
 (require 'init-git)
 
 (require-package 'diminish)
